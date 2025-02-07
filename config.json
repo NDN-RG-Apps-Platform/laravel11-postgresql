@@ -1,0 +1,22 @@
+{
+    "port": 8001,
+    "appName": "user-service",
+    "appEnv": "local",
+    "signatureKey": "IphDM6yqXe0n1o3CyMlV",
+    "database": {
+        "host": "localhost",
+        "port": 5432,
+        "name": "user_services",
+        "username": "root",
+        "password": "ndnRG123",
+        "maxOpenConnection": 10,
+        "maxLifeTimeConnection": 10,
+        "maxIdleConnection": 10,
+        "maxIdleTime": 10
+    },
+    "rateLimiterMaxRequest": 1000,
+    "rateLimiterTimeSecond": 60,
+    "jwtSecretKey": "OozDxGtWx79CMjAUC7u5",
+    "jwtExpirationTime": 1440
+}
+
