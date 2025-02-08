@@ -14,6 +14,7 @@ type UserResponse struct {
 	Username    string    `json:"username"`
 	Email       string    `json:"email"`
 	PhoneNumber string    `json:"phoneNumber"`
+	Photo       string    `json:"photo"`
 	Role        string    `json:"role,omitempty"`
 	Library     string    `json:"library,omitempty"`
 }
@@ -31,6 +32,7 @@ type RegisterRequest struct {
 	ConfirmPassword string `json:"confirmPassword" validates:"required"`
 	Email           string `json:"email" validates:"required,email"`
 	PhoneNumber     string `json:"phoneNumber" validates:"required"`
+	Photo           string `json:"photo" validates:"required"`
 	RoleID          uint
 	LibraryID       uint
 }
@@ -40,13 +42,14 @@ type RegisterResponse struct {
 }
 
 type UpdateRequest struct {
-	RegNumber       string `json:"regNumber" validates:"required"`
-	Name            string `json:"name" validates:"required"`
-	Username        string `json:"username" validates:"required"`
-	Password        string `json:"password" validates:"required"`
-	ConfirmPassword string `json:"confirmPassword" validates:"required"`
-	Email           string `json:"email" validates:"required,email"`
-	PhoneNumber     string `json:"phoneNumber" validates:"required"`
+	RegNumber       string  `json:"regNumber" validates:"required"`
+	Name            string  `json:"name" validates:"required"`
+	Username        string  `json:"username" validates:"required"`
+	Password        *string `json:"password" validates:"required"`
+	ConfirmPassword *string `json:"confirmPassword" validates:"required"`
+	Email           string  `json:"email" validates:"required,email"`
+	PhoneNumber     string  `json:"phoneNumber" validates:"required"`
+	Photo           string  `json:"photo" validates:"required"`
 	RoleID          uint
 	LibraryID       uint
 }
