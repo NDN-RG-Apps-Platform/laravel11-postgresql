@@ -1,4 +1,4 @@
-name: booking-order-app # change this to your app name
+name: Library-TelU-app # change this to your app name
 services:
   user-service: # change this to your service name
     container_name: user-service # change this to your service name
