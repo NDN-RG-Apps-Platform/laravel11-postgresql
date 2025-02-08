@@ -9,8 +9,8 @@ import (
 
 func RunRoleSeeder(db *gorm.DB) {
 	roles := []models.Roles{
-		{Code: "ADMINISTRATOR", RoleName: "Administrator"},
-		{Code: "CO_ADMINISTRATOR", RoleName: "Co-Administrator"},
+		{Code: "ADMIN", RoleName: "Admin"},
+		{Code: "CO_ADMIN", RoleName: "Co-Admin"},
 		{Code: "STAFF", RoleName: "Staff"},
 		{Code: "LECTURE", RoleName: "Lecture"},
 		{Code: "STUDENT", RoleName: "User"},
